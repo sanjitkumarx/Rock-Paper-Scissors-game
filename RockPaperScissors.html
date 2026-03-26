@@ -8,27 +8,12 @@
 <body>
     <button onclick="
         
-     let num= Math.random();   
-    let computerSelect = '';
-
-    if( num >=0 && num < 1/3){
-
-      computerSelect = 'Rock'  ;
-      console.log(computerSelect );
-    } else if( num >= 1/3 && num < 2/3){
-
-        computerSelect = 'paper';
-         console.log(computerSelect );
-    }else if( num >= 2/3 && num <= 1 ){
-
-        computerSelect = 'Sessior';
-         console.log(computerSelect );;
-    }
+    computerSelect();
 
     // compare result
-      if(  computerSelect === 'Rock'){
+      if(  computerSelectp === 'Rock'){
         console.log('tie');
-      } else if(computerSelect === 'Sessior'){
+      } else if(computerSelectp === 'Sessior'){
 
         console.log('You win *** ')
       }else {
@@ -39,28 +24,13 @@
       "
     >Rock</button>
     <button onclick="
-
-     let numm= Math.random();   
-    let computerSelectt = '';
-
-    if( numm >=0 && numm < 1/3){
-
-      computerSelectt= 'Rock'  ;
-      console.log(computerSelectt );
-    } else if( numm >= 1/3 && numm < 2/3){
-
-        computerSelectt = 'paper';
-         console.log(computerSelectt );
-    }else if( numm >= 2/3 && numm <= 1 ){
-
-        computerSelectt = 'Sessior';
-         console.log(computerSelectt );
-    }
-
+     // function call for select random move 
+     computerSelect();
     // compare result
-      if(  computerSelectt === 'paper'){
+
+      if(  computerSelectp === 'paper'){
         console.log('tie');
-      } else if(computerSelectt=== 'rock'){
+      } else if(computerSelectp=== 'rock'){
 
         console.log('You win *** ')
       }else {
@@ -74,22 +44,7 @@
     >paper</button>
     <button onclick="
     
-         let nump= Math.random();   
-    let computerSelectp = '';
-
-    if( nump>=0 && nump < 1/3){
-
-      computerSelectp= 'Rock'  ;
-      console.log(computerSelectp );
-    } else if( nump >= 1/3 && nump< 2/3){
-
-     computerSelectp = 'paper';
-         console.log(computerSelectp);
-    }else if( nump>= 2/3 && nump<= 1 ){
-
-        computerSelectp = 'Sessior';
-         console.log(computerSelectp);
-    }
+       computerSelect();
 
     // compare result
       if(  computerSelectp === 'Sessior'){
@@ -106,6 +61,41 @@
     
     
     ">Sessior</button>
+
+    <script>
+    
+    // computer select random random move variable 
+   let computerSelectp = '';
+
+
+
+   // computer move random selection function 
+    function computerSelect(){
+
+        let nump= Math.random();   
+    
+
+    if( nump>=0 && nump < 1/3){
+
+      computerSelectp= 'Rock'  ;
+      console.log(computerSelectp );
+    } else if( nump >= 1/3 && nump< 2/3){
+
+     computerSelectp = 'paper';
+         console.log(computerSelectp);
+    }else if( nump>= 2/3 && nump<= 1 ){
+
+        computerSelectp = 'Sessior';
+         console.log(computerSelectp);
+    }
+
+
+
+
+    }
+
+
+    </script>
      
 </body>
 </html>
