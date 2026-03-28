@@ -8,64 +8,30 @@
 <body>
     <button onclick="
         
-    computerSelect();
-
-    // compare result
-      if(  computerSelectp === 'Rock'){
-        console.log('tie');
-      } else if(computerSelectp === 'Sessior'){
-
-        console.log('You win *** ')
-      }else {
-
-        console.log('You lose ')
-      }
+       compare(computerSelect());
 
       "
     >Rock</button>
     <button onclick="
-     // function call for select random move 
-     computerSelect();
-    // compare result
+       
 
-      if(  computerSelectp === 'paper'){
-        console.log('tie');
-      } else if(computerSelectp=== 'rock'){
 
-        console.log('You win *** ')
-      }else {
-
-        console.log('You lose ')
-      }
-
-    
+        compare(computerSelect());
     
     "
     >paper</button>
     <button onclick="
     
-       computerSelect();
+         
+         compare(computerSelect());
+     
 
-    // compare result
-      if(  computerSelectp === 'Sessior'){
-        console.log('tie');
-      } else if(computerSelectp=== 'paper'){
 
-        console.log('You win *** ')
-      }else {
-
-        console.log('You lose ')
-      }
-
-    
-    
-    
     ">Sessior</button>
 
     <script>
     
-    // computer select random random move variable 
-   let computerSelectp = '';
+   
 
 
 
@@ -73,6 +39,7 @@
     function computerSelect(){
 
         let nump= Math.random();   
+        let computerSelectp = '';
     
 
     if( nump>=0 && nump < 1/3){
@@ -89,10 +56,30 @@
          console.log(computerSelectp);
     }
 
-
+   return  computerSelectp ;
 
 
     }
+
+    // result compare function 
+
+    function compare( computerSelectp ){
+      
+      
+      if(  computerSelectp === 'Sessior'){
+        console.log('tie');
+      } else if(computerSelectp=== 'paper'){
+
+        console.log('You win *** ')
+      }else {
+
+        console.log('You lose ')
+      }
+
+    }
+
+
+    
 
 
     </script>
