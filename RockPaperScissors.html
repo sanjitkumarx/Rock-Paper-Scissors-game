@@ -33,10 +33,17 @@
     <script>
     
    
+    let  score =  {
+
+       win:0,
+       loss:0,
+       tie:0,
+       totalPlay:0
+
+    };
+    
 
 
-
-   // computer move random selection function 
     function computerSelect(){
 
         let nump= Math.random();   
@@ -78,13 +85,13 @@
 
         if(computerMove === 'Sessior'){
              
-          result =' tiiii';
+          result ='tie';
 
         }else if( computerMove === 'paper' ){
 
-           result ='You Win ';
+           result ='You win';
         }else{
-          result ='You Win ';
+          result ='You lose';
 
         }
 
@@ -97,13 +104,13 @@
 
         if(computerMove === 'paper'){
              
-          result =' tiiii';
+          result ='tie';
 
-        }else if( computerMove === 'rock' ){
+        }else if( computerMove === 'Rock' ){
 
-           result ='You Win ';
+           result ='You win';
         }else{
-          result ='You Win ';
+          result ='You lose';
 
         }
 
@@ -115,26 +122,37 @@
 
         if(computerMove === 'Rock'){
              
-          result =' tiiii';
+          result ='tie';
 
         }else if( computerMove === 'Sessior' ){
 
-           result ='You Win ';
+           result ='You win';
         }else{
-          result ='You Win ';
-
+          result ='You lose';
+      
         }
 
 
 
       }
      
-     
-        
-      
-     
+     // score setup 
 
-      alert(`you select ${playerMove} and computer select ${ computerMove }  result = > ${result}`);
+     if(result === 'You win'){
+
+      score.win += 1;
+     }else if( result === 'You lose'){
+      score.loss += 1;
+     }else if(result=== 'tie'){
+      score.tie += 1;
+     }
+
+     score.totalPlay = score.loss + score.loss + score.tie;
+        
+      console.log(score.totalPlay);
+     
+      // console.log(score.totalPlay());
+      alert(`you select ${playerMove} and computer select ${ computerMove }  result = > ${result}|| you win : ${score.win} || you loss ${score.loss} || tie : ${score.tie} tatal number of match ${score.totalPlay}`);
 
     }
 
