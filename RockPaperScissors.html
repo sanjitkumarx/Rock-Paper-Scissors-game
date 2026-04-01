@@ -30,19 +30,33 @@
 
     ">Sessior</button>
 
+    <button
+    onclick="
+    
+    score.loss=0;
+    score.tie=0;
+    score.win=0;
+    score.totalPlay=0;
+    localStorage.removeItem('score');
+
+    ">reset : Score </button>
+
     <script>
     
    
-    let  score =  {
+    let  score = JSON.parse(localStorage.getItem("score"));
+    
+    if(score === null){
 
-       win:0,
+      score={
+       win: 0,
        loss:0,
        tie:0,
-       totalPlay:0
+       totalPlay:0 ,
+       
+      };
 
-    };
-    
-
+    }
 
     function computerSelect(){
 
@@ -147,9 +161,12 @@
       score.tie += 1;
      }
 
-     score.totalPlay = score.loss + score.loss + score.tie;
+
+     score.totalPlay += 1;
+
+     
         
-      console.log(score.totalPlay);
+       localStorage.setItem("score" , JSON.stringify(score));
      
       // console.log(score.totalPlay());
       alert(`you select ${playerMove} and computer select ${ computerMove }  result = > ${result}|| you win : ${score.win} || you loss ${score.loss} || tie : ${score.tie} tatal number of match ${score.totalPlay}`);
